@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import Header from './Layouts/Header/Header';
+import Sidebar from './Layouts/Sidebar/Sidebar';
+import RightSide from './Pages/RightSide';
+import Dashboard from './Pages/Dashboard';
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  useEffect(() => {
+    document.documentElement.classList.add("dark");
+    console.log(document.documentElement.classList); // Check if 'dark' class is added
+  }, []);
+
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen flex dark:bg-black dark:text-white">
+    {/* <div className="h-screen flex dark:bg-black dark:text-white"> */}
+      <Sidebar isSidebarOpen={isSidebarOpen} />
+      <div className="flex-1 flex flex-col">
+        <Header toggleSidebar={toggleSidebar} />
+        <main className='flex-grow flex'>
+          <div className='flex-1 pl-4'>
+            <Dashboard />
+          </div>
+          <RightSide />
+          </main>
+      </div>
+    
     </div>
   );
 }
