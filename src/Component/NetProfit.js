@@ -8,9 +8,9 @@ const Netprofit = () => {
     const color = '#4CAF50'; // Color of the progress
 //<div className="py-6 dark:bg-gray-600 rounded-lg p-5 flex items-center justify-center">
     return (
-        <div className="flex gap-3 dark:bg-gray-800 items-center p-8 rounded-lg ">
+        <div className="flex gap-3 dark:bg-gray-800 items-center  p-8 rounded-lg ">
          
-            <div className="flex items-center p-1 space-x-28"> {/* Added space-x-6 for horizontal spacing */}
+            <div className="flex items-center  p-1 space-x-28"> {/* Added space-x-6 for horizontal spacing */}
                 <div className="text-white">
                    
                     <p className="text-sm ">Net Profit</p>

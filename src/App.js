@@ -4,13 +4,12 @@ import Header from './Layouts/Header/Header';
 import Sidebar from './Layouts/Sidebar/Sidebar';
 import RightSide from './Pages/RightSide';
 import Dashboard from './Pages/Dashboard';
-import Activity from './Component/Activity';
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
-    document.documentElement.classList.add("dark");
-    console.log(document.documentElement.classList); // Check if 'dark' class is added
+    document.documentElement.classList.add('dark');
   }, []);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
@@ -25,7 +24,7 @@ function App() {
         <Sidebar isSidebarOpen={isSidebarOpen} />
 
         {/* Main content area */}
-        <main className=" flex flex-col lg:flex-row sm:flex-col ">
+        <main className="flex flex-col lg:flex-row sm:flex-col">
           <Dashboard />
           <RightSide />
         </main>

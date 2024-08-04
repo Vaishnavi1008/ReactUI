@@ -15,10 +15,10 @@ const Header = ({ toggleSidebar }) => {
       </button>
       {/* Dashboard icon */}
       <a href="#" className="flex items-center ms-2">
-        <MdSpaceDashboard className="h-8 text-2xl text-violet-500" />
+        <MdSpaceDashboard className="h-10 text-2xl text-violet-500" />
       </a>
       {/* Search input */}
-      <div className=" flex items-center ms-4 ">
+      <div className=" flex items-center ms-4 ml-12 ">
         <input
           type="text"
           placeholder="Search..."

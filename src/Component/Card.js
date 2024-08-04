@@ -11,7 +11,7 @@ const InfoCard = ({ icon, title, number, change }) => {
         <h3 className="text-white text-sm md:text-base mb-1">{title}</h3>
         <div className="text-white text-xl md:text-2xl font-bold">{number}</div>
       </div>
-      <div className={`text-right text-sm ${change > 0 ? 'text-green-500' : 'text-red-500'} mt-2`}>
+      <div className={`text-right text-sm ${change > 0 ? 'text-green-500' : 'text-red-500'} `}>
         {change > 0 ? `▲ ${change}%` : `▼ ${change}%`}
       </div>
     </div>
