@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CustomerFeedback = ({className}) => {
+const CustomerFeedback = ({ className }) => {
   const feedbacks = [
     {
       name: 'Jenny Wilson',
@@ -20,11 +20,11 @@ const CustomerFeedback = ({className}) => {
   ];
 
   return (
-    <div className={`flex gap-3  flex-col   p-4 bg-gray-800 text-white rounded-lg shadow-md overflow-y-auto h-64`} style={{width:"22rem"}} >
-      <h2 className="text-xl font-semibold mb-4">Customer's Feedback</h2>
-      <div className="space-y-4">
+    <div className={`bg-gray-800 text-white rounded-lg shadow-md overflow-y-auto h-64`} style={{ width: '100%' }}>
+      <h2 className="text-xl font-semibold mb-4 p-4">Customer's Feedback</h2>
+      <div className="space-y-4 p-4">
         {feedbacks.map((feedback, index) => (
-          <div key={index} className="flex  flex-col space-y-2 bg-gray-900 p-4 rounded-md">
+          <div key={index} className="bg-gray-900 p-4 rounded-md">
             <div className="flex items-center space-x-3">
               <div className="bg-blue-500 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold">
                 {feedback.name.charAt(0)}
@@ -40,7 +40,7 @@ const CustomerFeedback = ({className}) => {
                 </div>
               </div>
             </div>
-            <p className="text-gray-300">{feedback.comment}</p>
+            <p className="text-gray-300 mt-2">{feedback.comment}</p>
           </div>
         ))}
       </div>

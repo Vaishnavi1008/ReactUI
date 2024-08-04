@@ -4,9 +4,9 @@ import Header from './Layouts/Header/Header';
 import Sidebar from './Layouts/Sidebar/Sidebar';
 import RightSide from './Pages/RightSide';
 import Dashboard from './Pages/Dashboard';
-
+import Activity from './Component/Activity';
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
@@ -16,19 +16,20 @@ function App() {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className="h-screen flex dark:bg-black dark:text-white">
-    {/* <div className="h-screen flex dark:bg-black dark:text-white"> */}
-      <Sidebar isSidebarOpen={isSidebarOpen} />
-      <div className="flex-1 flex flex-col">
-        <Header toggleSidebar={toggleSidebar} />
-        <main className='flex-grow flex'>
-          <div className='flex-1 pl-4'>
-            <Dashboard />
-          </div>
+    <div className="h-screen flex flex-col">
+      {/* Header */}
+      <Header toggleSidebar={toggleSidebar} />
+
+      <div className="flex flex-1">
+        {/* Sidebar */}
+        <Sidebar isSidebarOpen={isSidebarOpen} />
+
+        {/* Main content area */}
+        <main className=" flex flex-col lg:flex-row sm:flex-col ">
+          <Dashboard />
           <RightSide />
-          </main>
+        </main>
       </div>
-    
     </div>
   );
 }

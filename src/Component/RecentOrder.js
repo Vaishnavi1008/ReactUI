@@ -11,7 +11,7 @@ const RecentOrders = () => {
   ];
 
   return (
-    <div className="mx-3 my-3 p-3 bg-gray-800 text-white rounded-lg shadow-md">
+    <div className="my-3 p-3 bg-gray-800 text-white rounded-lg shadow-md ">
       <h2 className="text-xl font-semibold mb-4">Recent Orders</h2>
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-700">

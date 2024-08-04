@@ -6,10 +6,10 @@ const CircularProgress = ({ percentage, radius, strokeWidth, color }) => {
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <div className="relative flex items-center justify-center " style={{ width: radius,height : radius}}>
+    <div className="relative flex items-center justify-center mr-2 " >
       <svg
-        height={radius * 2}
-        width={radius * 2}
+        height="120"
+        width="150"
         className="absolute"
       >
         <circle
@@ -32,7 +32,7 @@ const CircularProgress = ({ percentage, radius, strokeWidth, color }) => {
         />
       </svg>
       <div
-        className="absolute flex flex-col items-center justify-center text-white"
+        className="absolute flex flex-col items-center justify-center text-white mr-6"
         style={{ lineHeight: 1 }}
       >
         <div className="text-2xl font-bold">{percentage}%</div>
